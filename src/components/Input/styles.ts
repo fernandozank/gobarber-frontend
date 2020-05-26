@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { shade } from 'polished';
 
 import Tooltip from '../Tooltip';
 
@@ -22,6 +23,7 @@ export const Container = styled.div<ContainerProps>`
   & + div {
     margin-top: 8px;
   }
+
 
   ${(props) =>
     props.isErrored &&
@@ -53,6 +55,10 @@ export const Container = styled.div<ContainerProps>`
     &::placeholder {
       color: #666360;
     }
+
+    /* &:disabled{
+      color: ${shade(0.3, '#666360')};
+    } */
   }
 
   > svg {
